@@ -1,89 +1,99 @@
-
+/* Tipografía y colores minimalistas */
 body {
-  font-family: Arial, sans-serif;
-  margin: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #cff1e4;
+  color: #2b543e;
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
 }
 
-header, footer {
-  background-color: #004d40;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
+/* Navegación */
+nav a.nav-link {
+  color: #0e2e1a;
+  transition: color 0.3s ease;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem 0;
+nav a.nav-link:hover,
+nav a.nav-link:focus {
+  color: #29b978;
+  text-decoration: underline;
 }
 
-nav a {
-  color: #a7ffeb;
-  text-decoration: none;
-}
-
-section {
-  margin: 3rem 0;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-}
-
-/* Style details and summary for collapsible content */
-details {
-  border: 1px solid #ccc;
-  padding: 0.8rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  background-color: #e0f2f1;
+/* Cursor pointer en summary para indicar interactividad */
+summary.cursor-pointer {
   cursor: pointer;
 }
 
-summary {
-  font-weight: bold;
-  font-size: 1.1rem;
-  outline: none;
-  list-style: none;
+/* Detalles con sombra sutil y borde */
+details {
+  background-color: #f9fafb;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
-/* Remove default marker and add custom plus/minus */
+details[open] {
+  background-color: #eef6fb;
+}
+
+/* Quitar marcador por defecto en summary */
 summary::-webkit-details-marker {
   display: none;
 }
 
+/* Símbolos + y - personalizados */
 summary::before {
   content: '+ ';
-  font-weight: bold;
-  color: #004d40;
+  font-weight: 700;
+  color: #009714;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 details[open] summary::before {
-  content: '- ';
+  content: '− ';
 }
 
-/* Form styles */
-form input, form textarea {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
+/* Formularios */
+form label {
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-form button {
-  background-color: #004d40;
-  color: white;
-  padding: 0.7rem 1.5rem;
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #29b94b;
+  box-shadow: 0 0 5px rgba(41, 185, 89, 0.5);
+}
+
+/* Botón */
+button.btn-primary {
+  background-color: #29b933;
   border: none;
-  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-@media (min-width: 600px) {
-  body {
-    max-width: 800px;
-    margin: 2rem auto;
+button.btn-primary:hover,
+button.btn-primary:focus {
+  background-color: #1f912a;
+  outline: none;
+}
+
+/* Espaciado responsivo */
+@media (max-width: 768px) {
+  main {
+    padding: 0 1rem;
   }
 }
