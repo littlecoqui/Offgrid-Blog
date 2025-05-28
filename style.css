@@ -1,99 +1,152 @@
-/* Tipografía y colores minimalistas */
+/* Fuente moderna y limpia */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #cff1e4;
-  color: #2b543e;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #c6f8c9;
+  color: #2f4f4f;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-/* Navegación */
-nav a.nav-link {
-  color: #0e2e1a;
-  transition: color 0.3s ease;
+/* Contenedor con padding lateral para separar contenido */
+.container.px-5 {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
-nav a.nav-link:hover,
-nav a.nav-link:focus {
-  color: #29b978;
-  text-decoration: underline;
+/* Navegación: cajas verdes con sombra y transición */
+.nav-box {
+  background-color: #28a745;
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  padding: 0.6rem 1.8rem;
+  color: rgb(230, 246, 216) !important;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
 }
 
-/* Cursor pointer en summary para indicar interactividad */
+.nav-box:hover,
+.nav-box:focus {
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 6px 15px rgba(33, 136, 56, 0.5);
+  outline: none;
+  text-decoration: none;
+  color: rgb(214, 253, 208) !important;
+}
+
+/* Labels con ancho fijo para alinear formulario */
+.label-fixed-width {
+  display: block;
+  font-weight: 600;
+  color: #2f4f4f;
+  margin-bottom: 0.3rem;
+}
+
+/* Cursor pointer para summary */
 summary.cursor-pointer {
   cursor: pointer;
+  outline-offset: 4px;
 }
 
-/* Detalles con sombra sutil y borde */
+/* Detalles con transición y fondo blanco */
 details {
-  background-color: #f9fafb;
-  border: 1px solid #e1e8ed;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
+  background-color: rgb(218, 254, 214);
   transition: background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 details[open] {
-  background-color: #eef6fb;
+  background-color: #d6fbe1;
 }
 
-/* Quitar marcador por defecto en summary */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Símbolos + y - personalizados */
-summary::before {
-  content: '+ ';
+/* Botón grande verde, responsivo */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
   font-weight: 700;
-  color: #009714;
-  font-size: 1.2rem;
-  margin-right: 0.5rem;
-}
-
-details[open] summary::before {
-  content: '− ';
-}
-
-/* Formularios */
-form label {
-  font-weight: 600;
-}
-
-form input,
-form textarea {
-  border: 1px solid #bdc3c7;
-  border-radius: 6px;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #29b94b;
-  box-shadow: 0 0 5px rgba(41, 185, 89, 0.5);
-}
-
-/* Botón */
-button.btn-primary {
-  background-color: #29b933;
-  border: none;
-  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
   transition: background-color 0.3s ease;
+  border-radius: 8px;
 }
 
-button.btn-primary:hover,
-button.btn-primary:focus {
-  background-color: #1f912a;
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #218838;
+  border-color: #1e7e34;
   outline: none;
 }
 
-/* Espaciado responsivo */
-@media (max-width: 768px) {
-  main {
-    padding: 0 1rem;
+/* Footer con fondo claro y texto centrado */
+footer {
+  background-color: #8dcca3;
+  color: #6c757d;
+  font-size: 0.875rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #acdab6;
+}
+
+/* Caja del formulario centrada y con sombra */
+.contact-card {
+  background: #b8ebbd;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(40, 167, 69, 0.08);
+  max-width: 420px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 0 auto 2rem auto;
+  border: 1.5px solid #e6f4ea;
+}
+
+/* Inputs y textarea con mismo ancho y estilo */
+.contact-input {
+  width: 100%;
+  min-width: 0;
+  border-radius: 8px;
+  border: 1.5px solid #c3e6cb;
+  box-shadow: none;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.contact-input:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 2px #a5f0ba;
+  outline: none;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .container.px-5 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
+  .contact-card {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+}
+/* Estilo para el botón de enviar */
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
 }
